@@ -189,8 +189,30 @@ test("a single failed poll is tolerated; consecutive failures mark the link down
   assert.equal(state.state.link.connected, true);
 });
 
-test("a class 2 notification updates power immediately", async () => {
-  const { driver, state } = rig({ power: "0" });
+test("a power notification marks the start of a transition, and the poll settles it", async () => {
+  // Captured on UNRAID: IR power-on -> "%2POWR=1" at once, poll said warming ~9s later.
+  const { driver, state, sim } = rig({ power: "0" });
+  await driver.pollOnce();
+  const seen = [];
+  state.on("change", (c) => "power" in c && seen.push(c.power));
+
+  driver._onNotify({ cmd: "POWR", value: "1", raw: "%2POWR=1" });
+  assert.equal(state.state.power, "warming");
+  sim.power = "3";
+  await driver.pollOnce();
+  sim.power = "1";
+  await driver.pollOnce();
+
+  driver._onNotify({ cmd: "POWR", value: "0", raw: "%2POWR=0" });
+  assert.equal(state.state.power, "cooling");
+  sim.power = "0";
+  await driver.pollOnce();
+
+  assert.deepEqual(seen, ["warming", "on", "cooling", "off"], "no on -> warming -> on flip-flop");
+});
+
+test("a late power notification never walks back a confirmed state", async () => {
+  const { driver, state } = rig({ power: "1" });
   await driver.pollOnce();
   driver._onNotify({ cmd: "POWR", value: "1", raw: "%2POWR=1" });
   assert.equal(state.state.power, "on");

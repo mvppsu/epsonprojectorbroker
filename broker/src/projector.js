@@ -214,7 +214,7 @@ class ProjectorDriver extends EventEmitter {
 
   _onNotify({ cmd, value, raw }) {
     this.emit("log", `notification ${raw}`);
-    if (cmd === "POWR" && POWER_STATES[value]) this._setPower(POWER_STATES[value]);
+    if (cmd === "POWR") this._applyPowerNotification(value);
     if (cmd === "INPT") this.emit("input", value);
     if (cmd === "ERST") {
       const errors = parseErst(value);
@@ -229,6 +229,15 @@ class ProjectorDriver extends EventEmitter {
     // a while since a change (most likely an IR-remote power press) is under way.
     this._bumpActive();
     this._schedulePoll(this.notifyConfirmMs);
+  }
+
+  // The LS11000 sends %2POWR=1 the moment a power-on *starts* (an IR-remote press was
+  // followed by a poll reporting POWR=3 warming ~9s later), so a notification marks the
+  // start of a transition, not its end. Show the in-between state, and let the
+  // confirming poll -- scheduled by the caller -- settle the real one.
+  _applyPowerNotification(value) {
+    if (value === "1" && this.power !== "on") this._setPower("warming");
+    else if (value === "0" && (this.power === "on" || this.power === "warming")) this._setPower("cooling");
   }
 
   // ---------- power control ----------

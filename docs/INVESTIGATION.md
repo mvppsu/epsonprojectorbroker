@@ -355,3 +355,19 @@ rarely change. So:
 One ESC/VP.net session sat idle in standby (before the power cycle) and answered
 `PWR?` at 30 s, 60 s, 120 s and 240 s without being dropped. A persistent connection
 works when ESC/VP.net is healthy.
+
+## PJLink notifications on UNRAID (03:26 UTC, 2026-10-22)
+
+The broker was deployed on 192.168.20.120 with the projector's Notified IP Address set
+to that host. An IR-remote power-on produced, in the broker log:
+
+```
+03:26:14.699 notification %2POWR=1
+03:26:18.398 notification %2INPT=32
+03:26:23.406 power warming        <- from the confirming poll
+```
+
+So `%2POWR=1` arrives as soon as power-on **starts**, ~50 s before the projector is
+actually on. The first build applied it literally and briefly reported on → warming → on.
+Power notifications are now treated as the start of a transition (`1` → warming,
+`0` → cooling), and polling confirms the final state.
