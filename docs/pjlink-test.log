@@ -1,0 +1,25 @@
+22:00:45 [   4.0s] before: PJLink %1POWR=0 | ESC/VP.net <escvp TimeoutError>
+22:00:45 [   4.0s] PJLink %1POWR 1 -> %1POWR=OK
+22:00:47 [   5.6s] ON  PJLink POWR -> %1POWR=ERR3
+22:00:51 [   9.6s] ON  ESC/VP.net PWR? -> <escvp TimeoutError>
+22:00:59 [  17.9s] ON  PJLink POWR -> %1POWR=3
+22:01:01 [  19.7s] ON  ESC/VP.net PWR? -> <escvp ConnectionResetError>
+22:01:07 [  25.7s] ON  ESC/VP.net PWR? -> <escvp ConnectionRefusedError>
+22:01:14 [  33.3s] ON  PJLink POWR -> %1POWR=ERR3
+22:01:36 [  55.3s] ON  PJLink POWR -> %1POWR=1
+22:01:40 [  58.9s] ON  PJLink POWR -> %1POWR=ERR3
+22:01:44 [  63.2s] ON  PJLink POWR -> %1POWR=1
+22:01:48 [  66.8s] ON  PJLink POWR -> %1POWR=ERR3
+22:02:01 [  79.6s] ON  PJLink POWR -> %1POWR=1
+22:02:08 [  87.2s] ON  PJLink POWR -> %1POWR=ERR3
+22:02:22 [ 100.4s] ON  PJLink POWR -> %1POWR=1
+22:03:46 [ 184.6s] on with ESC/VP.net healthy: False
+22:03:46 [ 184.6s] ESC/VP.net SOURCE? -> <escvp ConnectionRefusedError>
+22:03:46 [ 184.6s] ESC/VP.net CMODE? -> <escvp ConnectionRefusedError>
+22:03:46 [ 184.6s] ESC/VP.net SNO? -> <escvp ConnectionRefusedError>
+22:03:51 [ 189.6s] PJLink %1POWR 0 -> %1POWR=OK
+22:03:51 [ 189.8s] OFF PJLink POWR -> %1POWR=2
+22:03:51 [ 189.8s] OFF ESC/VP.net PWR? -> <escvp ConnectionRefusedError>
+22:03:55 [ 193.5s] OFF PJLink POWR -> %1POWR=ERR3
+22:03:59 [ 197.5s] OFF PJLink POWR -> %1POWR=0
+22:09:51 [ 550.0s] final: PJLink %1POWR=0 | ESC/VP.net <escvp ConnectionRefusedError>

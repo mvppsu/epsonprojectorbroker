@@ -1,0 +1,15 @@
+services:
+  epson-broker:
+    # Published by .github/workflows/docker-publish.yml on every push to main, so
+    # UNRAID's "Add Stack" (Compose Manager) can deploy straight from the GUI. To build
+    # from source instead, replace this with:
+    #   build: { context: .., dockerfile: docker/Dockerfile }
+    image: ghcr.io/mvppsu/epsonprojectorbroker:latest
+    container_name: epson-broker
+    restart: unless-stopped
+    # Host networking keeps the projector's PJLink notifications (UDP to this host on
+    # 4352) arriving with the projector's own source address, which the broker checks.
+    # Bridge networking also works: publish "8096:8096" and "4352:4352/udp" instead.
+    network_mode: host
+    volumes:
+      - ./appdata:/config

@@ -1,0 +1,15 @@
+22:30:35 [   0.0s] PJLink POWR %1POWR=1 INPT %1INPT=32 AVMT %1AVMT=30
+22:30:35 [   0.0s] PWR? -> PWR=01
+22:30:35 [   0.0s] SOURCE? -> SOURCE=30
+22:30:35 [   0.0s] SOURCELIST? -> SOURCELIST=30 HDMI1 A0 HDMI2
+22:30:35 [   0.0s] CMODE? -> CMODE=23
+22:30:36 [   0.1s] ASPECT? -> ASPECT=00 30
+22:30:36 [   0.1s] MUTE? -> MUTE=OFF
+22:30:36 [   0.1s] SNO? -> SNO=XATB3800017
+22:30:36 [   0.1s] VER? -> VER=66011564J6WWV305VER=----VER=----VER=16B6WWV100VER=----VER=----VER=----VER=54L3J5MV300VER=----VER=----VER=----VER=----VER=1ZF2WWV101VER=11.77.08.64
+22:30:36 [   0.1s] LAMP? -> LAMP=599
+22:30:36 [   0.1s] PWR OFF -> 
+22:30:42 [   6.1s] SOURCE? right after -> <timeout>
+22:30:47 [  11.7s] session PWR? <timeout> | PJLink %1POWR=ERR3
+22:30:54 [  18.7s] session PWR? <timeout> | PJLink %1POWR=0
+22:35:49 [ 314.0s] final fresh ESC/VP.net: <escvp TimeoutError> | PJLink %1POWR=0

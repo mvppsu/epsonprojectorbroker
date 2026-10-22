@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Epson Projector Broker",
+        "description": "Enter the address of the epson-projector-broker container.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "token": "Auth token (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the broker's WebSocket endpoint. Check the host, port, and that the container is running."
+    },
+    "abort": {
+      "already_configured": "This broker is already configured."
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": {
+        "name": "Power"
+      }
+    },
+    "sensor": {
+      "power_state": {
+        "name": "Power state",
+        "state": {
+          "off": "Standby",
+          "warming": "Warming up",
+          "on": "On",
+          "cooling": "Cooling down",
+          "unknown": "Unknown"
+        }
+      },
+      "laser_hours": {
+        "name": "Laser hours"
+      }
+    },
+    "binary_sensor": {
+      "link": {
+        "name": "Projector link"
+      },
+      "problem": {
+        "name": "Projector fault"
+      }
+    }
+  }
+}

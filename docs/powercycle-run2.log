@@ -1,0 +1,55 @@
+[   5.5s] start PWR? -> PWR=01
+[   5.6s] PWR? -> PWR=01
+[  10.4s] LUMINANCE? -> ERR
+[  10.5s] LIGHT? -> ERR
+[  10.5s] LASER? -> ERR
+[  10.5s] FREEZE? -> ERR
+[  10.5s] ERR? -> ERR
+[  10.5s] 4KENHANCE? -> ERR
+[  10.5s] POPLP? -> ERR
+[  10.5s] MSEL? -> ERR
+[  10.5s] SIGNAL? -> SIGNAL=00
+[  10.6s] PWR OFF -> 
+[  18.6s] SOURCE? during cooldown -> <timeout>
+[  26.6s] PWR? timeout; draining late reply
+[  30.6s]   late: <timeout>
+[  38.6s] PWR? timeout; draining late reply
+[  42.6s]   late: <timeout>
+[  50.6s] PWR? timeout; draining late reply
+[  54.6s]   late: <timeout>
+[  62.6s] PWR? timeout; draining late reply
+[  66.6s]   late: <timeout>
+[  74.6s] PWR? timeout; draining late reply
+[  78.6s]   late: <timeout>
+[  86.6s] PWR? timeout; draining late reply
+[  90.6s]   late: <timeout>
+[  98.6s] PWR? timeout; draining late reply
+[ 102.6s]   late: <timeout>
+[ 110.6s] PWR? timeout; draining late reply
+[ 116.6s]   late: <timeout>
+[ 124.6s] PWR? timeout; draining late reply
+[ 128.6s]   late: <timeout>
+[ 136.7s] PWR? timeout; draining late reply
+[ 140.7s]   late: <timeout>
+[ 148.7s] PWR? timeout; draining late reply
+[ 152.7s]   late: <timeout>
+[ 160.7s] PWR? timeout; draining late reply
+[ 164.7s]   late: <timeout>
+[ 172.7s] PWR? timeout; draining late reply
+[ 176.7s]   late: <timeout>
+[ 184.7s] PWR? timeout; draining late reply
+[ 188.7s]   late: <timeout>
+[ 196.7s] PWR? timeout; draining late reply
+[ 200.7s]   late: <timeout>
+[ 208.7s] PWR? timeout; draining late reply
+[ 212.7s]   late: <timeout>
+[ 220.7s] PWR? timeout; draining late reply
+[ 224.7s]   late: <timeout>
+[ 232.7s] PWR? timeout; draining late reply
+[ 236.7s]   late: <timeout>
+[ 244.7s] PWR? timeout; draining late reply
+[ 248.8s]   late: <timeout>
+[ 256.8s] PWR? timeout; draining late reply
+[ 260.8s]   late: <timeout>
+[ 260.8s] cool-down took 250.2s
+[ 273.8s] final PWR? -> <timeout>

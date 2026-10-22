@@ -1,0 +1,19 @@
+{
+  "name": "epson-projector-broker",
+  "version": "0.1.0",
+  "description": "Power broker for an Epson LS11000 projector over PJLink (with optional ESC/VP.net), exposing REST/WebSocket control for Home Assistant",
+  "private": true,
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "ws": "^8.18.0"
+  }
+}

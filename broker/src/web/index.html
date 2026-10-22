@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epson Projector Broker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1 id="model">Epson projector</h1>
+      <span id="link" class="pill">connecting…</span>
+    </header>
+
+    <section class="card power-card">
+      <div class="power-state">
+        <span id="power-dot" class="dot"></span>
+        <span id="power-label">—</span>
+      </div>
+      <div id="pending" class="muted"></div>
+      <div class="buttons">
+        <button id="btn-on" type="button">Power on</button>
+        <button id="btn-off" type="button">Power off</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <dl class="facts">
+        <dt>Input</dt><dd><select id="input"></select></dd>
+        <dt>Laser hours</dt><dd id="hours">—</dd>
+        <dt>Status</dt><dd id="errors">—</dd>
+        <dt>ESC/VP.net</dt><dd id="escvp">—</dd>
+      </dl>
+    </section>
+
+    <section class="card">
+      <h2>Log</h2>
+      <pre id="log"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

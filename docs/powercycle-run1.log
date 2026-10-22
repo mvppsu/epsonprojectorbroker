@@ -1,0 +1,56 @@
+[   0.0s] 'PWR?'           -> 'PWR=04 :' (1ms)
+[   0.0s] 'PWR ON'         -> ':' (1ms)
+[  10.0s] PWR? -> '<timeout>'
+[  14.5s] PWR? -> 'PWR=02 :'
+[  15.5s] PWR? -> 'IMEVENT=0001 02 00000000 00000000 T1 F1 :PWR=02 :'
+[  16.5s] PWR? -> 'PWR=02 :'
+[  30.1s] PWR? -> 'PWR=02 :IMEVENT=0001 02 00000002 00000000 T1 F1 :'
+[  31.1s] PWR? -> 'PWR=02 :'
+[  47.9s] PWR? -> 'PWR=01 :'
+[  52.9s] 'SOURCE?'        -> 'IMEVENT=0001 03 00000002 00000000 T1 F1 :PWR=01 :' (0ms)
+[  52.9s] 'SOURCELIST?'    -> 'SOURCE=30 :' (1ms)
+[  52.9s] 'SIGNAL?'        -> 'SOURCELIST=30 HDMI1 A0 HDMI2 :' (0ms)
+[  52.9s] 'CMODE?'         -> 'SIGNAL=00 :' (0ms)
+[  52.9s] 'LUMINANCE?'     -> 'CMODE=23 :' (0ms)
+[  52.9s] 'LIGHT?'         -> 'ERR :' (0ms)
+[  52.9s] 'ASPECT?'        -> 'ERR :' (1ms)
+[  52.9s] 'MUTE?'          -> 'ASPECT=30 30 :' (1ms)
+[  52.9s] 'FREEZE?'        -> 'MUTE=OFF :' (0ms)
+[  53.0s] 'HDRPQ?'         -> 'ERR :' (25ms)
+[  53.0s] 'HDRANGE?'       -> 'HDRPQ=08 :' (0ms)
+[  53.0s] 'DYNRANGE?'      -> 'ERR :' (0ms)
+[  53.0s] 'GAMMA?'         -> 'DYNRANGE=00 :' (49ms)
+[  53.1s] 'BRIGHT?'        -> 'GAMMA=22 :' (50ms)
+[  53.1s] 'CONTRAST?'      -> 'BRIGHT=126 :' (50ms)
+[  53.1s] 'DENSITY?'       -> 'CONTRAST=126 :' (0ms)
+[  53.1s] 'TINT?'          -> 'DENSITY=126 :' (0ms)
+[  53.1s] 'SHARP?'         -> 'TINT=126 :' (0ms)
+[  53.1s] 'CTEMP?'         -> 'SHARP=60 :' (0ms)
+[  53.1s] 'MCFI?'          -> 'CTEMP=219 :' (0ms)
+[  53.2s] '4KENHANCE?'     -> 'MCFI=02 :' (48ms)
+[  53.2s] 'IMGPRESET?'     -> 'ERR :' (0ms)
+[  53.2s] 'POPLP?'         -> 'IMGPRESET=03 :' (0ms)
+[  53.2s] 'LENS?'          -> 'ERR :' (0ms)
+[  53.3s] 'ZOOM?'          -> 'LENS=459 :' (93ms)
+[  53.4s] 'FOCUS?'         -> 'ZOOM=466 :' (98ms)
+[  53.5s] 'HREVERSE?'      -> 'FOCUS=556 :' (93ms)
+[  53.5s] 'VREVERSE?'      -> 'HREVERSE=OFF :' (0ms)
+[  53.5s] 'ERR?'           -> 'VREVERSE=OFF :' (0ms)
+[  53.5s] 'LAMP?'          -> 'ERR :' (0ms)
+[  53.5s] 'ONTIME?'        -> 'LAMP=599 :' (0ms)
+[  53.5s] 'VER?'           -> 'ONTIME=599 :' (13ms)
+[  53.5s] 'PRODUCT?'       -> 'VER=5X011564J6WWV302 VER=---- VER=---- VER=16B6WWV100 VER=---- VER=---- VER=---- VER=54L3J5MV300 VER=---- VER=---- VER=---- VER=---- VER=1ZF2WWV101 VER=11.77.08.64 :' (59ms)
+[  53.5s] 'SNO?'           -> 'ERR :' (1ms)
+[  53.5s] 'MSEL?'          -> 'SNO=XATB3800017 :' (1ms)
+[  53.5s] 'AUDIO?'         -> 'ERR :' (0ms)
+[  53.5s] 'VOL?'           -> 'ERR :' (0ms)
+[  53.5s] 'SOURCE?'        -> 'ERR :' (1ms)
+[  53.5s] 'PWR OFF'        -> 'SOURCE=30 :' (1ms)
+[  54.5s] 'PWR ON'         -> ':IMEVENT=0001 04 00000002 00000000 T1 F1 :IMEVENT=0001 01 00000000 00000000 T1 F1 :' (0ms)
+[  60.0s] 'SOURCE?'        -> ':' (5494ms)
+[  70.0s] PWR? -> '<timeout>'
+[  73.6s] PWR? -> 'SOURCE=30 :'
+[  74.6s] PWR? -> 'IMEVENT=0001 02 00000000 00000000 T1 F1 :PWR=02 :'
+[  75.6s] PWR? -> 'PWR=02 :'
+
+[exited with code 144]

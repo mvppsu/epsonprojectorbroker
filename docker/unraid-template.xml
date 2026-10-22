@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>epson-broker</Name>
+  <Repository>ghcr.io/mvppsu/epsonprojectorbroker:latest</Repository>
+  <Registry>https://ghcr.io/mvppsu/epsonprojectorbroker</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/mvppsu/epsonprojectorbroker</Project>
+  <Overview>
+    Power broker for an Epson LS11000 projector. Keeps authoritative power state over
+    PJLink (gentle polling plus the projector's class 2 UDP notifications) and exposes
+    power on/off to Home Assistant (via the bundled custom_component), a REST API, and a
+    built-in web panel.
+
+    Set the projector's Projector Control > Notified IP Address to this server's IP so
+    remote-control power changes show up immediately. See docs/INSTALL.md.
+  </Overview>
+  <Category>HomeAutomation: MediaApp:Video</Category>
+  <!-- Host networking: the port is fixed by http.port in broker.yaml (default 8096). -->
+  <WebUI>http://[IP]:8096/</WebUI>
+  <TemplateURL/>
+  <Icon></Icon>
+  <ExtraParams/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+    Power broker for an Epson LS11000 projector over PJLink, with REST, WebSocket and
+    Home Assistant control.
+  </Description>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/epson-broker" Mode="rw" Description="Holds broker.yaml (projector address, polling, HTTP port, input names). Must persist across container updates." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/epson-broker</Config>
+</Container>

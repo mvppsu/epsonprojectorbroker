@@ -1,0 +1,6 @@
+22:48:45 [   0.0s] PJLink POWR before: %1POWR=1
+22:48:45 [   0.0s] PJLink %1POWR 0 -> %1POWR=OK
+22:48:52 [   6.6s] PJLink POWR -> %1POWR=ERR3
+22:49:02 [  16.6s] PJLink POWR -> %1POWR=0
+22:49:17 [  31.7s] ESC/VP.net attempt 1: handshake b'ESC/VP.net\x10\x03\x00\x00 \x00' reply b'PWR=04\r:'
+22:49:17 [  31.7s] done. PJLink POWR %1POWR=0

@@ -1,0 +1,10 @@
+node_modules/
+config/
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+
+
+# Raw protocol captures from the investigation are documentation, not runtime logs.
+!docs/*.log

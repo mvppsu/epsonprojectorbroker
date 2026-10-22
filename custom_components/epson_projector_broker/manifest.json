@@ -1,0 +1,11 @@
+{
+  "domain": "epson_projector_broker",
+  "name": "Epson Projector Broker",
+  "codeowners": ["@mvppsu"],
+  "config_flow": true,
+  "documentation": "https://github.com/mvppsu/epsonprojectorbroker",
+  "integration_type": "hub",
+  "iot_class": "local_push",
+  "requirements": [],
+  "version": "1.0.0"
+}

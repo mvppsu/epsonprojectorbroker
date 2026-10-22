@@ -1,0 +1,71 @@
+:root {
+  --bg: #111418;
+  --card: #1b2027;
+  --text: #e6e9ee;
+  --muted: #8b95a3;
+  --accent: #3d8bfd;
+  --on: #39c26b;
+  --busy: #e6a23c;
+  --off: #59616d;
+  --bad: #e5534b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main { max-width: 560px; margin: 0 auto; padding: 16px; }
+
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 14px; margin: 0 0 8px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+
+.pill { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--off); }
+.pill.ok { background: var(--on); color: #08130c; }
+.pill.bad { background: var(--bad); }
+
+.card { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+
+.power-state { display: flex; align-items: center; gap: 10px; font-size: 26px; font-weight: 600; text-transform: capitalize; }
+.dot { width: 14px; height: 14px; border-radius: 50%; background: var(--off); }
+.dot.on { background: var(--on); box-shadow: 0 0 10px var(--on); }
+.dot.warming, .dot.cooling { background: var(--busy); animation: pulse 1.2s infinite; }
+@keyframes pulse { 50% { opacity: 0.35; } }
+
+.muted { color: var(--muted); min-height: 1.4em; margin: 4px 0 12px; }
+
+.buttons { display: flex; gap: 12px; }
+button {
+  flex: 1;
+  padding: 14px;
+  font: inherit;
+  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+  background: #2a313b;
+  color: var(--text);
+  cursor: pointer;
+}
+button:hover { background: #333b47; }
+#btn-on { background: var(--accent); color: #fff; }
+button:disabled { opacity: 0.45; cursor: default; }
+
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+select { font: inherit; background: #2a313b; color: var(--text); border: 0; border-radius: 6px; padding: 4px 8px; }
+
+pre {
+  margin: 0;
+  max-height: 260px;
+  overflow: auto;
+  font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--muted);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
