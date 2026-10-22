@@ -41,8 +41,8 @@ A power request is held until the projector confirms it. If the projector is bus
   fault status, and a full power-on/power-off cycle through the REST API in the
   Docker image.
 - 36 unit tests (`node --test`, no hardware required).
-- Home Assistant integration import-checked against a real `homeassistant` install.
-  Not yet installed on the live HA instance.
+- Home Assistant integration installed and working on the live HA instance. It was
+  import-checked against a real `homeassistant` install first.
 - Deployed on UNRAID (192.168.20.120). PJLink class 2 notifications confirmed: an
   IR-remote power-on produced `%2POWR=1` straight away. That notification marks the
   *start* of warm-up, so the broker treats it as `warming` and lets the next poll confirm.
