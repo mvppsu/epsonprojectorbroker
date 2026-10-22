@@ -99,3 +99,24 @@ and never more than once every 30 s.
 If ESC/VP.net stops answering, power control isn't affected. The panel shows
 "ESC/VP.net: Unavailable". The projector's network-reset menu item, or a firmware
 update, has brought it back before.
+
+## DemoPad
+
+Confirmed working. Use a **Generic IP Device** with IP `192.168.20.120`, port `8096`,
+TCP (UDP unchecked), and the default Command Suffix `\x0D\x0A`. Each command is a raw
+HTTP request; the suffix supplies the blank line that ends it.
+
+| Command | Command Data |
+|---|---|
+| On | `POST /api/power/on HTTP/1.1\x0D\x0AHost: 192.168.20.120:8096\x0D\x0AContent-Length: 0\x0D\x0A` |
+| Off | `POST /api/power/off HTTP/1.1\x0D\x0AHost: 192.168.20.120:8096\x0D\x0AContent-Length: 0\x0D\x0A` |
+| Status | `GET /api/power HTTP/1.1\x0D\x0AHost: 192.168.20.120:8096\x0D\x0A` |
+| Toggle | `POST /api/power/toggle HTTP/1.1\x0D\x0AHost: 192.168.20.120:8096\x0D\x0AContent-Length: 0\x0D\x0A` |
+
+For feedback, poll `Status` every 5–10 s and match `"power":"on"`, `"power":"off"`,
+`"power":"warming"` and `"power":"cooling"`, quotes included. `/api/power` is answered
+from the broker's stored state, so polling it adds no traffic to the projector.
+
+If `http.authToken` is set, add `Authorization: Bearer <token>\x0D\x0A` to each request.
+The broker closes idle connections after 5 s. If a DemoPad build doesn't reconnect
+cleanly, add `Connection: close\x0D\x0A` to each command.
